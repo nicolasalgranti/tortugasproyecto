@@ -19,6 +19,25 @@ li {
   display: inline-block;
 }
 
+/*ajustes destinados a que los estilos de bootstrap no sobreescriban mis estilos*/
+h1,
+p,
+ul,
+a {
+  font-size: medium;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+a {
+  color: #551a8b;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: large;
+}
+
 /* estilos del body */
 
 main {
@@ -44,6 +63,7 @@ main {
 
 #navBar li a {
   margin-left: 30px;
+  font-size: medium;
 }
 
 #navBar li a:hover {
@@ -59,6 +79,39 @@ main {
 #navBar .botontitulo img {
   height: 60px;
   width: auto;
+}
+
+/* Estilos header: Responsive */
+
+@media (max-width: 768px) {
+  #navBar ul li a {
+    margin-left: 15px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+  }
+  #navBar {
+    flex-direction: column;
+  }
+  .botontitulo {
+    justify-content: center;
+    padding-top: 20px;
+  }
+  #header {
+    height: 100px;
+  }
+  #navBar ul {
+    padding-top: 10px;
+  }
+  #banner .titulo {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 480px) {
+    #navBar ul li a {
+      margin-left: 15px;
+      font-size: small;
+    }
+  }
 }
 /* contenido común a todas las páginas */
 
@@ -76,7 +129,7 @@ main {
   font-size: larger;
   width: auto;
   height: 200px;
-  background-color: beige;
+  background-color: rgb(255, 244, 231);
   display: flex;
   align-items: center;
 
@@ -139,6 +192,7 @@ main {
   margin: auto;
   width: 500px;
   height: auto;
+  padding: 20px;
 }
 
 .mapa {
@@ -273,13 +327,19 @@ main {
   display: flex;
   justify-content: space-around;
   gap: 80px;
+  height: 150px;
+  align-items: center;
 }
 
 #footer li {
-  margin-left: 10px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+#footer li a:hover {
+  color: white;
 }
 
 #footer .footerLogo {
@@ -304,54 +364,10 @@ main {
   gap: 10px;
 }
 
-/* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */
-
-@media (max-width: 768px) {
-  #containerMasinfo {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 200px);
-    grid-template-areas: "gridImg1Carey gridImg2Bastarda" "gridImg3Verde gridImg4Laud" "gridImg5Boba gridImg6Olivacea";
-  }
-}
-
-@media (max-width: 480px) {
-  #containerMasinfo {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 200px);
-    grid-template-areas: "gridImg1Carey" "gridImg2Bastarda" "gridImg3Verde" "gridImg4Laud" "gridImg5Boba" "gridImg6Olivacea";
-    justify-content: center;
-    text-align: center;
-  }
-  .Box img {
-    max-width: 80%;
-  }
-}
-
-/* PÁGINA TIENDA: MEDIA QUERIES */
-
-@media (max-width: 768px) {
-  #containerTienda {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 350px);
-    grid-template-areas: "gridImg1peluche1 gridImg2peluche2" "gridImg3peluche3 gridImg4pelucheazul" "gridImg5squirtle";
-  }
-}
-
-@media (max-width: 480px) {
-  #containerTienda {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 200px);
-    grid-template-areas: "gridImg1peluche1" "gridImg2peluche2" "gridImg3peluche3" "gridImg4pelucheazul" "gridImg5squirtle";
-  }
-}
-
 /* ESTILOS FOOTER: SISTEMA RESPONSIVO */
 @media (max-width: 768px) {
-  #footer li {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: smaller;
+  #footer ul li a {
+    font-size: small;
   }
 
   #footer .footerLogo {
@@ -370,20 +386,59 @@ main {
 }
 
 @media (max-width: 480px) {
-  #footer li {
-    font-size: xx-small;
-  }
   #footer .footerLogo {
     display: flex;
     align-items: center;
   }
   #footer .footerLogo img {
-    height: 30px;
+    height: 45px;
     width: auto;
   }
 
   #footer .footerRedes img {
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 25px;
+    max-height: 25px;
+  }
+}
+
+/* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  #containerMasinfo {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas: "gridImg1Carey gridImg2Bastarda" "gridImg3Verde gridImg4Laud" "gridImg5Boba gridImg6Olivacea";
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #containerMasinfo {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 200px);
+    grid-template-areas: "gridImg1Carey" "gridImg2Bastarda" "gridImg3Verde" "gridImg4Laud" "gridImg5Boba" "gridImg6Olivacea";
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* PÁGINA TIENDA: MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  #containerTienda {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 350px);
+    grid-template-areas: "gridImg1peluche1 gridImg2peluche2" "gridImg3peluche3 gridImg4pelucheazul" "gridImg5squirtle";
+  }
+  #banner {
+    height: min-content;
+  }
+}
+
+@media (max-width: 480px) {
+  #containerTienda {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 350px);
+    grid-template-areas: "gridImg1peluche1" "gridImg2peluche2" "gridImg3peluche3" "gridImg4pelucheazul" "gridImg5squirtle";
   }
 }
