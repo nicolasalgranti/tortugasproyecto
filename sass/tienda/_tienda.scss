@@ -1,0 +1,61 @@
+/* tienda */
+
+#banner .articletienda p {
+  padding: 30px;
+}
+
+#banner .articletienda h2 {
+  font-size: initial;
+  font-weight: normal;
+  margin-top: 100px;
+}
+
+#containerTienda {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 450px);
+  gap: 0px;
+  grid-template-areas: "gridImg1peluche1 gridImg2peluche2 gridImg3peluche3" "gridImg4pelucheazul gridImg5squirtle";
+}
+
+.gridImg1peluche1 {
+  grid-area: gridImg1peluche1;
+  background-image: url(../images/tienda/peluche1.jpg);
+}
+.gridImg2peluche2 {
+  grid-area: gridImg2peluche2;
+  background-image: url(../images/tienda/peluche2.jpg);
+}
+.gridImg3peluche3 {
+  grid-area: gridImg3peluche3;
+  background-image: url(../images/tienda/peluche3.jpg);
+}
+.gridImg4pelucheazul {
+  grid-area: gridImg4pelucheazul;
+  background-image: url(../images/tienda/pelucheazul.jpg);
+}
+.gridImg5squirtle {
+  grid-area: gridImg5squirtle;
+  background-image: url(../images/tienda/peluchepokemon.jpg);
+}
+
+/* PÁGINA TIENDA: MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  #containerTienda {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 350px);
+    grid-template-areas: "gridImg1peluche1 gridImg2peluche2" "gridImg3peluche3 gridImg4pelucheazul" "gridImg5squirtle";
+  }
+  #banner {
+    height: min-content;
+  }
+}
+
+@media (max-width: 480px) {
+  #containerTienda {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 350px);
+    grid-template-areas: "gridImg1peluche1" "gridImg2peluche2" "gridImg3peluche3" "gridImg4pelucheazul" "gridImg5squirtle";
+  }
+}

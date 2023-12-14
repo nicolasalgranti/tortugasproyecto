@@ -1,0 +1,35 @@
+/* index */
+
+.indeximgcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+#banner .articleindex p {
+  padding: 100px;
+}
+
+.imagen1 img,
+.imagen2 img {
+  height: 300px;
+  width: auto;
+}
+.imagen1,
+.imagen2 {
+  font-style: italic;
+  padding-bottom: 45px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.imagen2 p {
+  white-space: pre-line;
+}
+
+.imagen1 p {
+  /*La propiedad white-space: pre-line que sirve para hacer line breaks me genera un espaciado antes de la caption de la imagen2, por lo que uso este padding para que quede parejo*/
+  padding-top: 25px;
+}

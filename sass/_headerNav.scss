@@ -1,0 +1,104 @@
+/* navegación */
+
+.navbar-brand img {
+  width: 100px;
+  height: auto;
+}
+
+#navbarNav {
+  margin-right: 50px;
+}
+
+.navbar-brand {
+  margin-left: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand h1 {
+  color: white;
+  padding-left: 10px;
+}
+.container-fluid {
+  background-color: rgb(12, 200, 210);
+}
+
+.navbar-expand-lg {
+  padding: 0px;
+}
+
+#navbarNav ul li {
+  a {
+    color: #551a8b;
+    margin-right: 15px;
+  }
+  a:hover {
+    color: white;
+  }
+}
+
+// estilos previos a bootstrap
+
+// #header {
+//   background-color: rgb(12, 200, 210);
+//   height: 70px;
+//   width: 100%;
+//   position: fixed;
+//   top: 0;
+// }
+
+// #navBar {
+//   height: 70px;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   li a {
+//     margin-left: 30px;
+//     font-size: medium;
+//     &:hover {
+//       color: white;
+//     }
+//     .botontitulo {
+//       color: white;
+//       display: flex;
+//       align-items: center;
+//       img {
+//         height: 60px;
+//         width: auto;
+//       }
+//     }
+//   }
+// }
+
+// /* Estilos header: Responsive */
+
+// @media (max-width: 768px) {
+//   #navBar ul li a {
+//     margin-left: 15px;
+//     padding-top: 20px;
+//     flex-wrap: wrap;
+//   }
+//   #navBar {
+//     flex-direction: column;
+//   }
+//   .botontitulo {
+//     justify-content: center;
+//     padding-top: 20px;
+//   }
+//   #header {
+//     height: 100px;
+//   }
+//   #navBar ul {
+//     padding-top: 10px;
+//   }
+//   #banner .titulo {
+//     margin-top: 80px;
+//   }
+
+//   @media (max-width: 480px) {
+//     #navBar ul li a {
+//       margin-left: 15px;
+//       font-size: small;
+//     }
+//   }
+// }

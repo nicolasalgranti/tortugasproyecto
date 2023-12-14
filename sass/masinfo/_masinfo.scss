@@ -1,0 +1,98 @@
+/*mas info*/
+#banner {
+  padding-bottom: 50px;
+}
+#banner .articleMasinfo h2 {
+  font-size: initial;
+  font-weight: normal;
+  padding: 75px;
+}
+
+#containerMasinfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 400px);
+  gap: 10px;
+  grid-template-areas: "gridImg1Carey gridImg2Bastarda gridImg3Verde" "gridImg4Laud gridImg5Boba gridImg6Olivacea";
+  padding: 5px;
+}
+
+.gridItem {
+  /*Los atributos de gridItem funcionan tambien para el grid de la tienda*/
+  display: flex;
+  flex-direction: column;
+}
+
+.gridItem div {
+  width: auto;
+  height: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.gridItem h3 {
+  font-size: medium;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+
+.gridItem img {
+  height: 200px;
+}
+
+.gridCaption {
+  height: min-content;
+  font-style: italic;
+  padding: 10px;
+}
+
+.gridImg1Carey {
+  grid-area: gridImg1Carey;
+  background-image: url(../images/masinfo/tortugacarey.jpg);
+}
+.gridImg2Bastarda {
+  grid-area: gridImg2Bastarda;
+  background-image: url(../images/masinfo/tortugabastarda.jpg);
+}
+
+.gridImg3Verde {
+  grid-area: gridImg3Verde;
+  background-image: url(../images/masinfo/tortugaverde.jpg);
+}
+
+.gridImg4Laud {
+  grid-area: gridImg4Laud;
+  background-image: url(../images/masinfo/tortugalaud.jpg);
+}
+
+.gridImg5Boba {
+  grid-area: gridImg5Boba;
+  background-image: url(../images/masinfo/tortugaboba.jpg);
+}
+
+.gridImg6Olivacea {
+  grid-area: gridImg6Olivacea;
+  background-image: url(../images/masinfo/tortuga\ olivacea.jpg);
+}
+
+/* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  #containerMasinfo {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 500px);
+    grid-template-areas: "gridImg1Carey gridImg2Bastarda" "gridImg3Verde gridImg4Laud" "gridImg5Boba gridImg6Olivacea";
+  }
+}
+
+@media (max-width: 480px) {
+  #containerMasinfo {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 200px);
+    grid-template-areas: "gridImg1Carey" "gridImg2Bastarda" "gridImg3Verde" "gridImg4Laud" "gridImg5Boba" "gridImg6Olivacea";
+    justify-content: center;
+    text-align: center;
+  }
+}

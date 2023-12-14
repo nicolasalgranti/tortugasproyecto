@@ -1,0 +1,67 @@
+/* resets css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amiko", sans-serif;
+}
+
+a,
+li {
+  font-style: none;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+}
+
+/*ajustes destinados a que los estilos de bootstrap no sobreescriban mis estilos*/
+h1,
+p,
+ul,
+a {
+  font-size: medium;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+a {
+  color: #551a8b;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: large;
+}
+
+/* estilos del body */
+
+main {
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+/* contenido común a todas las páginas */
+
+#banner {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 203, 157);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#banner .titulo {
+  margin-top: 0px;
+  font-size: larger;
+  width: auto;
+  height: 200px;
+  background-color: rgb(255, 244, 231);
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}

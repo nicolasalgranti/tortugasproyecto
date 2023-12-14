@@ -1,0 +1,19 @@
+/* donaciones */
+
+.articledonaciones p {
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.articledonaciones img {
+  width: 250px;
+  height: auto;
+}
+
+.articledonaciones .tortuedit {
+  width: 450px;
+  height: auto;
+  padding: 30px;
+  display: block;
+  margin: 0 auto; /*me permite centrar la imagen tras aplicarle display:block. Es necesario para que el logo de mercado pago quede debajo de la foto*/
+}
