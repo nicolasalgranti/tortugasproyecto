@@ -172,6 +172,32 @@ main {
   justify-content: center;
 }
 
+.imagentitulo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(255, 244, 231);
+}
+.imagentitulo .izq img,
+.imagentitulo .der img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+}
+.imagentitulo .izq img {
+  left: 0;
+}
+.imagentitulo .der img {
+  right: 0;
+}
+.imagentitulo h1 {
+  margin: 0;
+  z-index: 1; /* Ensure the heading is above the images */
+}
+
 /* index */
 .indeximgcontainer {
   display: flex;
@@ -182,7 +208,7 @@ main {
 }
 
 #banner .articleindex p {
-  padding: 100px;
+  padding: 75px;
 }
 
 .imagen1 img,
@@ -206,6 +232,19 @@ main {
 .imagen1 p {
   /*La propiedad white-space: pre-line que sirve para hacer line breaks me genera un espaciado antes de la caption de la imagen2, por lo que uso este padding para que quede parejo*/
   padding-top: 25px;
+}
+
+.imgindexintro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgindexintro img {
+  height: 500px;
+}
+.imgindexintro p {
+  line-break: auto;
+  width: auto;
 }
 
 /* contacto */
@@ -236,6 +275,15 @@ main {
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .form {
+    width: 400px;
+    margin-top: 50px;
+  }
+  iframe {
+    width: 400px;
+  }
+}
 /* donaciones */
 .articledonaciones p {
   margin-top: 20px;
@@ -255,6 +303,34 @@ main {
   margin: 0 auto; /*me permite centrar la imagen tras aplicarle display:block. Es necesario para que el logo de mercado pago quede debajo de la foto*/
 }
 
+/* Add this to your existing CSS or create a new stylesheet */
+.donation-progress {
+  text-align: center;
+  margin: 20px;
+  padding-top: 20px;
+}
+.donation-progress p {
+  font-style: italic;
+}
+
+.progress-container {
+  width: 50%; /* Adjust as needed */
+  margin: 10px auto;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50; /* Green color for the progress bar */
+}
+
+#progress-text {
+  margin-top: 10px;
+}
+
 /* tienda */
 #banner .articletienda p {
   padding: 30px;
@@ -272,6 +348,9 @@ main {
   grid-template-rows: repeat(2, 450px);
   gap: 0px;
   grid-template-areas: "gridImg1peluche1 gridImg2peluche2 gridImg3peluche3" "gridImg4pelucheazul gridImg5squirtle";
+}
+#containerTienda .Box img {
+  border-radius: 10px;
 }
 
 .gridImg1peluche1 {
@@ -331,10 +410,13 @@ main {
 #containerMasinfo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 400px);
+  grid-template-rows: repeat(2, auto);
   gap: 10px;
   grid-template-areas: "gridImg1Carey gridImg2Bastarda gridImg3Verde" "gridImg4Laud gridImg5Boba gridImg6Olivacea";
   padding: 5px;
+}
+#containerMasinfo img {
+  object-fit: cover;
 }
 
 .gridItem {
@@ -342,24 +424,21 @@ main {
   display: flex;
   flex-direction: column;
 }
-
-.gridItem div {
-  width: auto;
-  height: 100%;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .gridItem h3 {
   font-size: medium;
   padding: 0;
   margin: 0;
   line-height: normal;
 }
-
-.gridItem img {
-  height: 200px;
+.gridItem .Box {
+  width: auto;
+  height: 400px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.gridItem .Box img {
+  border-radius: 10px;
 }
 
 .gridCaption {
@@ -396,6 +475,18 @@ main {
 .gridImg6Olivacea {
   grid-area: gridImg6Olivacea;
   background-image: url(../images/masinfo/tortuga\ olivacea.jpg);
+}
+
+.video {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.video p {
+  font-style: italic;
+  margin-top: 25px;
 }
 
 /* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */

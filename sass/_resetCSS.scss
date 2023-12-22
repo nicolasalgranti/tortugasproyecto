@@ -65,3 +65,33 @@ main {
 
   justify-content: center;
 }
+
+.imagentitulo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(255, 244, 231);
+
+  .izq img,
+  .der img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+  }
+
+  .izq img {
+    left: 0;
+  }
+
+  .der img {
+    right: 0;
+  }
+
+  h1 {
+    margin: 0;
+    z-index: 1; /* Ensure the heading is above the images */
+  }
+}

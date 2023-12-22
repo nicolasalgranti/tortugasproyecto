@@ -17,3 +17,31 @@
   display: block;
   margin: 0 auto; /*me permite centrar la imagen tras aplicarle display:block. Es necesario para que el logo de mercado pago quede debajo de la foto*/
 }
+
+/* Add this to your existing CSS or create a new stylesheet */
+.donation-progress {
+  text-align: center;
+  margin: 20px;
+  padding-top: 20px;
+  p {
+    font-style: italic;
+  }
+}
+
+.progress-container {
+  width: 50%; /* Adjust as needed */
+  margin: 10px auto;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50; /* Green color for the progress bar */
+}
+
+#progress-text {
+  margin-top: 10px;
+}

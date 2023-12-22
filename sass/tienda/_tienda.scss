@@ -16,6 +16,11 @@
   grid-template-rows: repeat(2, 450px);
   gap: 0px;
   grid-template-areas: "gridImg1peluche1 gridImg2peluche2 gridImg3peluche3" "gridImg4pelucheazul gridImg5squirtle";
+  .Box {
+    img {
+      border-radius: 10px;
+    }
+  }
 }
 
 .gridImg1peluche1 {

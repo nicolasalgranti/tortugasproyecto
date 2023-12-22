@@ -11,35 +11,37 @@
 #containerMasinfo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 400px);
+  grid-template-rows: repeat(2, auto);
   gap: 10px;
   grid-template-areas: "gridImg1Carey gridImg2Bastarda gridImg3Verde" "gridImg4Laud gridImg5Boba gridImg6Olivacea";
   padding: 5px;
+  img {
+    object-fit: cover;
+  }
 }
 
 .gridItem {
   /*Los atributos de gridItem funcionan tambien para el grid de la tienda*/
   display: flex;
   flex-direction: column;
-}
 
-.gridItem div {
-  width: auto;
-  height: 100%;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+  h3 {
+    font-size: medium;
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+  }
 
-.gridItem h3 {
-  font-size: medium;
-  padding: 0;
-  margin: 0;
-  line-height: normal;
-}
-
-.gridItem img {
-  height: 200px;
+  .Box {
+    width: auto;
+    height: 400px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    img {
+      border-radius: 10px;
+    }
+  }
 }
 
 .gridCaption {
@@ -75,6 +77,18 @@
 .gridImg6Olivacea {
   grid-area: gridImg6Olivacea;
   background-image: url(../images/masinfo/tortuga\ olivacea.jpg);
+}
+
+.video {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-style: italic;
+    margin-top: 25px;
+  }
 }
 
 /* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */
