@@ -2,6 +2,7 @@
 #banner {
   padding-bottom: 50px;
 }
+
 #banner .articleMasinfo h2 {
   font-size: initial;
   font-weight: normal;
@@ -15,15 +16,17 @@
   gap: 10px;
   grid-template-areas: "gridImg1Carey gridImg2Bastarda gridImg3Verde" "gridImg4Laud gridImg5Boba gridImg6Olivacea";
   padding: 5px;
-  img {
-    object-fit: cover;
-  }
+
 }
 
 .gridItem {
-  /*Los atributos de gridItem funcionan tambien para el grid de la tienda*/
+
   display: flex;
   flex-direction: column;
+
+  max-width: 100%;
+
+
 
   h3 {
     font-size: medium;
@@ -33,50 +36,55 @@
   }
 
   .Box {
-    width: auto;
-    height: 400px;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center center;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     img {
-      border-radius: 10px;
+      width: 225px
     }
+
+
+
   }
 }
 
 .gridCaption {
   height: min-content;
   font-style: italic;
+  margin-top: 0px;
   padding: 10px;
 }
 
 .gridImg1Carey {
   grid-area: gridImg1Carey;
-  background-image: url(../images/masinfo/tortugacarey.jpg);
+
 }
+
 .gridImg2Bastarda {
   grid-area: gridImg2Bastarda;
-  background-image: url(../images/masinfo/tortugabastarda.jpg);
 }
 
 .gridImg3Verde {
   grid-area: gridImg3Verde;
-  background-image: url(../images/masinfo/tortugaverde.jpg);
 }
 
 .gridImg4Laud {
   grid-area: gridImg4Laud;
-  background-image: url(../images/masinfo/tortugalaud.jpg);
+  margin-top: 10px;
 }
 
 .gridImg5Boba {
   grid-area: gridImg5Boba;
-  background-image: url(../images/masinfo/tortugaboba.jpg);
+  margin-top: 10px;
 }
 
 .gridImg6Olivacea {
   grid-area: gridImg6Olivacea;
-  background-image: url(../images/masinfo/tortuga\ olivacea.jpg);
+  margin-top: 10px;
+
 }
 
 .video {
@@ -85,28 +93,67 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   p {
     font-style: italic;
     margin-top: 25px;
+    white-space: pre-line;
+
+
+
   }
 }
 
-/* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */
+.bold {
+  font-weight: bold;
+}
+
+// /* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */
 
 @media (max-width: 768px) {
   #containerMasinfo {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 500px);
+    grid-template-rows: repeat(3, 550px);
     grid-template-areas: "gridImg1Carey gridImg2Bastarda" "gridImg3Verde gridImg4Laud" "gridImg5Boba gridImg6Olivacea";
+  }
+
+  .gridImg4Laud {
+    grid-area: gridImg4Laud;
+    margin-top: 0px;
+  }
+
+  .gridImg5Boba {
+    grid-area: gridImg5Boba;
+    margin-top: 0px;
+  }
+
+  .gridImg6Olivacea {
+    grid-area: gridImg6Olivacea;
+    margin-top: 0px;
+
   }
 }
 
 @media (max-width: 480px) {
   #containerMasinfo {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 200px);
+    grid-template-rows: repeat(6, 400px);
     grid-template-areas: "gridImg1Carey" "gridImg2Bastarda" "gridImg3Verde" "gridImg4Laud" "gridImg5Boba" "gridImg6Olivacea";
     justify-content: center;
     text-align: center;
   }
+
+  .video {
+    height: 100px;
+    width: auto;
+    padding: 100px;
+
+    p {
+      font-size: smaller;
+      margin-bottom: 100px;
+    }
+
+  }
+
+
 }

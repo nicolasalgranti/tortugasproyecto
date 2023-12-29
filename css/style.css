@@ -107,6 +107,15 @@
   color: white;
 }
 
+@media (max-width: 480px) {
+  .navbar-brand h1 {
+    font-size: small;
+  }
+  .navbar-brand img {
+    width: 50px;
+    height: auto;
+  }
+}
 /* resets css */
 * {
   margin: 0;
@@ -195,16 +204,71 @@ main {
 }
 .imagentitulo h1 {
   margin: 0;
-  z-index: 1; /* Ensure the heading is above the images */
+  z-index: 1;
+  /* Ensure the heading is above the images */
 }
 
 /* index */
+#containerGridArena {
+  display: grid;
+  grid-template-rows: repeat(2, 300px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-areas: "gridArena1 gridArena3 gridArena2" "gridArena4 gridArena5 gridArena2";
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.gridArena1 {
+  grid-area: gridArena1;
+  background-image: url(../../images/index/tortugasarena.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gridArena2 {
+  grid-area: gridArena2;
+  background-image: url(../../images/index/tortugasarena2.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gridArena3 {
+  grid-area: gridArena3;
+  background-image: url(../../images/index/tortugasarena3.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gridArena4 {
+  grid-area: gridArena4;
+  background-image: url(../../images/index/tortugasarena4.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gridArena5 {
+  grid-area: gridArena5;
+  background-image: url(../../images/index/tortugasarena5.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .indeximgcontainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+}
+.indeximgcontainer img {
+  display: block;
+  margin: auto;
 }
 
 #banner .articleindex p {
@@ -221,32 +285,55 @@ main {
 .imagen2 {
   font-style: italic;
   padding-bottom: 45px;
-  padding: 30px;
-  justify-content: center;
 }
 
 .imagen2 p {
   white-space: pre-line;
 }
 
+/* La propiedad white-space:pre-line con la que se crean quiebres de línea para el texto de la imagen2 me genera un padding encima del texto. Con este margin-top intento recrear este padding en la imagen1 para que quede parejo*/
 .imagen1 p {
-  /*La propiedad white-space: pre-line que sirve para hacer line breaks me genera un espaciado antes de la caption de la imagen2, por lo que uso este padding para que quede parejo*/
-  padding-top: 25px;
+  margin-top: 30px;
 }
 
-.imgindexintro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.imgindexintro img {
-  height: 500px;
-}
-.imgindexintro p {
-  line-break: auto;
-  width: auto;
+.imgindexintro h3 {
+  margin-top: 30px;
+  font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  #containerGridArena {
+    display: grid;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: "gridArena1 gridArena2" "gridArena3 gridArena2" "gridArena4 gridArena5";
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .imagen2 img {
+    width: 350px;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  #containerGridArena {
+    display: grid;
+    grid-template-rows: repeat(6, 300px);
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas: "gridArena1" "gridArena2" "gridArena2" "gridArena3" "gridArena4" "gridArena5";
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .imagen1 img {
+    width: 350px;
+  }
+  .imagen2 img {
+    width: 300px;
+    height: auto;
+  }
+}
 /* contacto */
 #banner .articlecontacto p {
   padding: 10px;
@@ -342,6 +429,25 @@ main {
   margin-top: 100px;
 }
 
+.gridItemTienda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gridItemTienda h3 {
+  font-size: medium;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+.gridItemTienda .Box {
+  width: 225px;
+  height: 275px;
+  display: flex;
+  align-items: center;
+}
+
 #containerTienda {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -350,32 +456,29 @@ main {
   grid-template-areas: "gridImg1peluche1 gridImg2peluche2 gridImg3peluche3" "gridImg4pelucheazul gridImg5squirtle";
 }
 #containerTienda .Box img {
-  border-radius: 10px;
+  border-radius: 20px;
+  width: 225px;
+  height: auto;
 }
 
 .gridImg1peluche1 {
   grid-area: gridImg1peluche1;
-  background-image: url(../images/tienda/peluche1.jpg);
 }
 
 .gridImg2peluche2 {
   grid-area: gridImg2peluche2;
-  background-image: url(../images/tienda/peluche2.jpg);
 }
 
 .gridImg3peluche3 {
   grid-area: gridImg3peluche3;
-  background-image: url(../images/tienda/peluche3.jpg);
 }
 
 .gridImg4pelucheazul {
   grid-area: gridImg4pelucheazul;
-  background-image: url(../images/tienda/pelucheazul.jpg);
 }
 
 .gridImg5squirtle {
   grid-area: gridImg5squirtle;
-  background-image: url(../images/tienda/peluchepokemon.jpg);
 }
 
 /* PÁGINA TIENDA: MEDIA QUERIES */
@@ -415,14 +518,11 @@ main {
   grid-template-areas: "gridImg1Carey gridImg2Bastarda gridImg3Verde" "gridImg4Laud gridImg5Boba gridImg6Olivacea";
   padding: 5px;
 }
-#containerMasinfo img {
-  object-fit: cover;
-}
 
 .gridItem {
-  /*Los atributos de gridItem funcionan tambien para el grid de la tienda*/
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 .gridItem h3 {
   font-size: medium;
@@ -431,50 +531,48 @@ main {
   line-height: normal;
 }
 .gridItem .Box {
-  width: auto;
-  height: 400px;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .gridItem .Box img {
-  border-radius: 10px;
+  width: 225px;
 }
 
 .gridCaption {
   height: min-content;
   font-style: italic;
+  margin-top: 0px;
   padding: 10px;
 }
 
 .gridImg1Carey {
   grid-area: gridImg1Carey;
-  background-image: url(../images/masinfo/tortugacarey.jpg);
 }
 
 .gridImg2Bastarda {
   grid-area: gridImg2Bastarda;
-  background-image: url(../images/masinfo/tortugabastarda.jpg);
 }
 
 .gridImg3Verde {
   grid-area: gridImg3Verde;
-  background-image: url(../images/masinfo/tortugaverde.jpg);
 }
 
 .gridImg4Laud {
   grid-area: gridImg4Laud;
-  background-image: url(../images/masinfo/tortugalaud.jpg);
+  margin-top: 10px;
 }
 
 .gridImg5Boba {
   grid-area: gridImg5Boba;
-  background-image: url(../images/masinfo/tortugaboba.jpg);
+  margin-top: 10px;
 }
 
 .gridImg6Olivacea {
   grid-area: gridImg6Olivacea;
-  background-image: url(../images/masinfo/tortuga\ olivacea.jpg);
+  margin-top: 10px;
 }
 
 .video {
@@ -487,23 +585,48 @@ main {
 .video p {
   font-style: italic;
   margin-top: 25px;
+  white-space: pre-line;
 }
 
-/* PÁGINA MÁS INFORMACIÓN : MEDIA QUERIES */
+.bold {
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   #containerMasinfo {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 500px);
+    grid-template-rows: repeat(3, 550px);
     grid-template-areas: "gridImg1Carey gridImg2Bastarda" "gridImg3Verde gridImg4Laud" "gridImg5Boba gridImg6Olivacea";
+  }
+  .gridImg4Laud {
+    grid-area: gridImg4Laud;
+    margin-top: 0px;
+  }
+  .gridImg5Boba {
+    grid-area: gridImg5Boba;
+    margin-top: 0px;
+  }
+  .gridImg6Olivacea {
+    grid-area: gridImg6Olivacea;
+    margin-top: 0px;
   }
 }
 @media (max-width: 480px) {
   #containerMasinfo {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 200px);
+    grid-template-rows: repeat(6, 400px);
     grid-template-areas: "gridImg1Carey" "gridImg2Bastarda" "gridImg3Verde" "gridImg4Laud" "gridImg5Boba" "gridImg6Olivacea";
     justify-content: center;
     text-align: center;
+  }
+  .video {
+    height: 100px;
+    width: auto;
+    padding: 100px;
+  }
+  .video p {
+    font-size: smaller;
+    margin-bottom: 100px;
   }
 }
 
