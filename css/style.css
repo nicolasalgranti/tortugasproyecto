@@ -387,7 +387,8 @@ main {
   height: auto;
   padding: 30px;
   display: block;
-  margin: 0 auto; /*me permite centrar la imagen tras aplicarle display:block. Es necesario para que el logo de mercado pago quede debajo de la foto*/
+  margin: 0 auto;
+  /*me permite centrar la imagen tras aplicarle display:block. Es necesario para que el logo de mercado pago quede debajo de la foto*/
 }
 
 /* Add this to your existing CSS or create a new stylesheet */
@@ -401,7 +402,8 @@ main {
 }
 
 .progress-container {
-  width: 50%; /* Adjust as needed */
+  width: 50%;
+  /* Adjust as needed */
   margin: 10px auto;
   background-color: #ddd;
   height: 20px;
@@ -411,13 +413,20 @@ main {
 
 .progress-bar {
   height: 100%;
-  background-color: #4caf50; /* Green color for the progress bar */
+  background-color: #4caf50;
+  /* Green color for the progress bar */
 }
 
 #progress-text {
   margin-top: 10px;
 }
 
+@media (max-width: 480px) {
+  .articledonaciones .tortuedit {
+    width: 350px;
+    height: auto;
+  }
+}
 /* tienda */
 #banner .articletienda p {
   padding: 30px;
@@ -620,13 +629,11 @@ main {
     text-align: center;
   }
   .video {
-    height: 100px;
-    width: auto;
-    padding: 100px;
+    padding: 30px;
   }
   .video p {
-    font-size: smaller;
-    margin-bottom: 100px;
+    font-size: small;
+    margin-bottom: 50px;
   }
 }
 
